@@ -1,121 +1,98 @@
-<div align="center">
-
-<img src="https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.8+">
-<img src="https://img.shields.io/badge/Matplotlib-3.5%2B-orange?style=for-the-badge&logo=python&logoColor=white" alt="Matplotlib">
-<img src="https://img.shields.io/github/license/stephenlzc/pythesis-plot?style=for-the-badge&color=green" alt="License">
-<img src="https://img.shields.io/github/v/release/stephenlzc/pythesis-plot?style=for-the-badge&color=blue" alt="Release">
-<img src="https://img.shields.io/github/stars/stephenlzc/pythesis-plot?style=for-the-badge&color=yellow" alt="Stars">
-
 # 📊 PyThesisPlot
 
-**Professional Scientific Plotting for Academic Publications**
+> **Scientific Plotting Skill for Claude Code** — Transform raw data into publication-ready figures with Nature/Science quality standards.
 
-*From Data to Publication-Ready Figures in Minutes*
-
-[🚀 Quick Start](#quick-start) • [📖 Documentation](#documentation) • [💡 Examples](#examples) • [📝 Release Notes](https://github.com/stephenlzc/pythesis-plot/releases) • [🌐 中文](README.zh-CN.md)
-
-</div>
+[![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/stephenlzc/pythesis-plot)](https://github.com/stephenlzc/pythesis-plot/releases)
+[![中文](https://img.shields.io/badge/中文-README-red.svg)](README.zh-CN.md)
 
 ---
 
-## ✨ Features
+## 🎯 What is PyThesisPlot?
 
-<table>
-<tr>
-<td width="50%">
+PyThesisPlot is a **Claude Code Skill** that teaches AI assistants how to create publication-quality scientific figures from raw data. It provides:
 
-### 🎯 **Workflow-Driven**
-- **Data Upload** → **Analysis** → **Recommendations** → **Confirmation** → **Generation**
-- Smart data analysis with automatic chart recommendations
-- User confirmation required before generation
+- 📊 **Intelligent Workflow**: Data → Analysis → Recommendations → Confirmation → Figures
+- 🎨 **Journal-Ready Output**: 300 DPI, Nature/Science style compliance
+- 🔬 **Multi-Domain Support**: Biology, Psychology, Economics, Chemistry
+- 📁 **Organized Output**: Timestamped directories with reproducible code
 
-### 📁 **Organized Output**
+**Trigger**: When you upload data files (CSV/Excel/TXT) and ask for plots, charts, or figures.
+
+---
+
+## 📦 Installation
+
+### For Claude Code
+
+```bash
+# Clone the repository
+git clone https://github.com/stephenlzc/pythesis-plot.git
+
+# Copy skill to Claude's skills directory
+cp -r pythesis-plot ~/.claude/skills/
+
+# Or symlink to avoid duplication
+ln -s $(pwd)/pythesis-plot ~/.claude/skills/pythesis-plot
 ```
-output/
-└── 20250312-143052-data/
-    ├── 20250312-143052-data.csv
-    ├── analysis_report.md
-    ├── plot_config.json
-    ├── 20250312-143052_plot.py
-    └── *.png (300 DPI)
+
+### For OpenCode / Other AI Assistants
+
+Copy the skill directory to your agent's skills folder:
+
+```bash
+cp -r pythesis-plot /path/to/your/agent/skills/
 ```
-
-</td>
-<td width="50%">
-
-### 🎨 **Publication-Ready**
-- 300 DPI high-resolution PNG output
-- Nature/Science/Lancet style compliance
-- Automatic statistical annotations (* / ** / ***)
-- Professional color palettes (colorblind-friendly)
-
-### 🔬 **Multi-Domain Support**
-- 🧬 Biology & Medicine (qPCR, Western Blot, Cell assays)
-- 📈 Psychology & Social Sciences (Survey data, RCT studies)
-- 📊 Economics & Business (Time series, Comparisons)
-- 🧪 Chemistry & Materials (Spectroscopy, Measurements)
-
-</td>
-</tr>
-</table>
 
 ---
 
 ## 🚀 Quick Start
 
-### Installation
+Once installed, simply upload your data and ask:
 
-```bash
-# Clone the skill
-git clone https://github.com/stephenlzc/pythesis-plot.git
-cd pythesis-plot
+> "**Help me create some charts for my thesis**"
 
-# Install dependencies
-pip install pandas matplotlib seaborn openpyxl numpy scipy
+> "**Plot this data for my scientific paper**"
+
+> "**Generate publication-ready figures from this Excel file**"
+
+The skill will automatically:
+1. **Analyze** your data structure and types
+2. **Recommend** appropriate chart types
+3. **Wait for your confirmation** on chart selection
+4. **Generate** 300 DPI PNG figures + reproducible Python code
+
+---
+
+## 📋 Skill Structure
+
 ```
-
-### Basic Usage
-
-#### Option 1: Complete Workflow (Recommended)
-
-```bash
-python scripts/workflow.py --input your_data.csv
-```
-
-This will:
-1. 📁 Create organized output directory
-2. 🔍 Analyze your data automatically
-3. 💡 Recommend chart schemes
-4. ⏳ Wait for your confirmation
-5. 🎨 Generate publication-ready figures
-
-#### Option 2: Analysis Only
-
-```bash
-python scripts/data_analyzer.py --input your_data.csv
-```
-
-#### Option 3: Generate from Config
-
-```bash
-python scripts/plot_generator.py --config plot_config.json
+pythesis-plot/
+├── SKILL.md                          # Skill definition (trigger conditions)
+├── README.md                         # This file
+├── README.zh-CN.md                   # Chinese documentation
+├── scripts/
+│   ├── workflow.py                   # Main orchestrator
+│   ├── data_analyzer.py              # Data analysis engine
+│   └── plot_generator.py             # Figure generation engine
+├── references/
+│   ├── workflow_guide.md             # Workflow documentation
+│   ├── chart_types.md                # Chart selection guide
+│   ├── style_guide.md                # Visual standards
+│   └── examples.md                   # Code examples
+└── assets/themes/
+    ├── academic.mplstyle             # Academic journal style
+    ├── nature.mplstyle               # Nature journal style
+    └── presentation.mplstyle         # Presentation style
 ```
 
 ---
 
-## 📖 Documentation
+## 🎨 Supported Chart Types
 
-### 📋 Table of Contents
-
-- [Workflow Guide](references/workflow_guide.md) - Complete workflow walkthrough
-- [Chart Types](references/chart_types.md) - Available chart types and when to use them
-- [Style Guide](references/style_guide.md) - Color schemes, fonts, and layout standards
-- [Examples](references/examples.md) - Code examples for common scenarios
-
-### 🎨 Supported Chart Types
-
-| Chart Type | Best For | Example |
-|:----------:|:---------|:--------|
+| Chart Type | Best For | Example Use Case |
+|:----------:|:---------|:-----------------|
 | 📈 Line Plot | Time series, Trends | Gene expression over time |
 | 📊 Bar Chart | Group comparisons | Treatment vs Control |
 | 🎯 Box Plot | Distribution, Outliers | qPCR Ct values |
@@ -125,150 +102,160 @@ python scripts/plot_generator.py --config plot_config.json
 
 ---
 
-## 💡 Examples
+## 💡 Example Use Cases
 
-### Example 1: PCOS Study (Biomedical)
-
-**Data**: Mouse PCOS model with BRAC1 gene expression (108 samples, 3 groups)
-
-**Generated Figures**:
-- Body weight comparison with significance markers
-- Ovary weight analysis
-- BRAC1 relative expression (log scale)
-- qPCR Ct value distributions
-- **Comprehensive 2×2 dashboard**
-
-**Key Finding**: BRAC1 expression downregulated 55× in PCOS model (p<0.001)
-
-```bash
-python scripts/workflow.py --input Mouse_PCOS_BRAC1_RawData_108.xlsx
-```
-
-### Example 2: Mental Health RCT (Psychology)
-
-**Data**: Adolescent mental health intervention (1200 participants, 4 groups)
-
-**Generated Figures**:
-- CONSORT-style study overview
-- SDQ pre/post comparison
-- Responder analysis (0.3% → 61.3%)
-- Dose-response relationship
-- **6-panel comprehensive dashboard**
-
-**Key Finding**: Combined CBT+Mindfulness intervention achieved 61.3% response rate
-
-```bash
-python scripts/workflow.py --input Adolescent_Mental_Health_Intervention_1200.xlsx
-```
-
----
-
-## 🏗️ Architecture
+### Example 1: Biomedical Research (qPCR Data)
 
 ```
-pythesis-plot/
-├── 📄 SKILL.md                      # Skill definition
-├── 📁 scripts/
-│   ├── 🔄 workflow.py               # Main workflow orchestrator
-│   ├── 🔍 data_analyzer.py          # Data analysis engine
-│   └── 🎨 plot_generator.py         # Chart generation engine
-├── 📁 references/
-│   ├── 📖 workflow_guide.md         # Workflow documentation
-│   ├── 📊 chart_types.md            # Chart type guide
-│   ├── 🎨 style_guide.md            # Visual style standards
-│   └── 💻 examples.md               # Code examples
-├── 📁 assets/themes/
-│   ├── 🎓 academic.mplstyle         # Academic style theme
-│   ├── 🔬 nature.mplstyle           # Nature journal style
-│   └── 📊 presentation.mplstyle     # Presentation style
-└── 📁 output/                       # Generated outputs
-```
+User: "I have qPCR data for my PCOS study. Help me create figures."
 
----
-
-## 🎯 Workflow Stages
-
-```mermaid
-graph TD
-    A[📤 User Uploads Data] --> B[📁 Auto-save to Output]
-    B --> C[🔍 Data Analysis]
-    C --> D[💡 Chart Recommendations]
-    D --> E{⏳ User Confirmation}
-    E -->|Confirm| F[🎨 Generate Charts]
-    E -->|Modify| D
-    F --> G[✅ Delivery]
+AI: Analyzing Mouse_PCOS_BRAC1_RawData_108.xlsx...
+    Detected: 108 samples, 3 groups, gene expression data
     
-    style A fill:#e1f5fe
-    style E fill:#fff3e0
-    style G fill:#e8f5e9
+    Recommended Charts:
+    1. Body weight comparison (bar chart)
+    2. BRAC1 expression levels (log scale bar chart)
+    3. qPCR Ct distributions (box plot)
+    4. Comprehensive 2×2 dashboard
+
+User: "Generate all of them"
+
+AI: ✅ Generated 4 publication-ready figures in output/20250312-143052-PCOS/
 ```
 
-### Stage 1: Data Reception 📤
-- Automatic file renaming with timestamp
-- Organized directory creation
-- Support for CSV, Excel, TXT, Markdown
+### Example 2: Psychology RCT Study
 
-### Stage 2: Data Analysis 🔍
-- Automatic dimension detection
-- Column type identification (numeric/categorical/datetime)
-- Statistical summary generation
-- Relationship analysis
+```
+User: "Plot my mental health intervention results"
 
-### Stage 3: Chart Recommendations 💡
-- AI-powered chart type suggestions
-- Layout recommendations
-- Statistical test suggestions
+AI: Analyzing Adolescent_Mental_Health_Intervention_1200.xlsx...
+    Detected: 1200 participants, 4-arm RCT, pre/post measurements
+    
+    Recommended Charts:
+    1. CONSORT-style study flow
+    2. SDQ pre/post comparison
+    3. Responder analysis (stacked bar)
+    4. Effect size forest plot
 
-### Stage 4: User Confirmation ⏳
-- **CRITICAL**: Must wait for explicit confirmation
-- Interactive modification support
-- Preview recommendations
+User: "Generate schemes 1, 2, and 3"
 
-### Stage 5: Generation & Delivery ✅
-- High-resolution PNG generation (300 DPI)
-- Reproducible Python code output
-- Organized file management
+AI: ✅ Generated 3 figures with statistical annotations
+```
 
 ---
 
-## 📦 Dependencies
+## ⚙️ How It Works
 
-```toml
-[dependencies]
-python = ">=3.8"
-pandas = ">=1.3.0"
-matplotlib = ">=3.5.0"
-seaborn = ">=0.11.0"
-openpyxl = ">=3.0.0"  # Excel support
-numpy = ">=1.20.0"
-scipy = ">=1.7.0"
+### 1. Skill Trigger
+
+The skill activates when the YAML `description` in `SKILL.md` matches your request:
+
+```yaml
+---
+name: pythesis-plot
+description: Python scientific plotting tool... 
+  Triggers when users upload data files (txt/md/excel/csv) 
+  and mention "help me plot", "create chart", "data visualization", 
+  "thesis figure", "scientific plotting"...
+---
+```
+
+### 2. Workflow Stages
+
+```
+┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+│ Data Upload │────▶│  Analysis   │────▶│Recommendations│
+└─────────────┘     └─────────────┘     └──────┬──────┘
+                                                │
+                                                ▼
+┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+│   Delivery  │◀────│ Generation  │◀────│Confirmation │
+│  (PNG+Code) │     │             │     │  (Required) │
+└─────────────┘     └─────────────┘     └─────────────┘
+```
+
+### 3. Output Organization
+
+All outputs saved to timestamped directory:
+
+```
+output/
+└── 20250312-143052-your-data/
+    ├── 20250312-143052-your-data.csv    # Original data (renamed)
+    ├── analysis_report.md               # Data analysis report
+    ├── plot_config.json                 # Chart configuration
+    ├── 20250312-143052_plot.py          # Reproducible Python code
+    └── *.png                            # 300 DPI figures
+```
+
+---
+
+## 📖 Documentation
+
+- **[Workflow Guide](references/workflow_guide.md)** — Complete workflow walkthrough
+- **[Chart Types](references/chart_types.md)** — When to use which chart
+- **[Style Guide](references/style_guide.md)** — Color schemes and visual standards
+- **[Examples](references/examples.md)** — Code examples and tutorials
+
+---
+
+## 🔧 Dependencies
+
+```bash
+pip install pandas matplotlib seaborn openpyxl numpy scipy
 ```
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions welcome! This skill follows the standard SKILL.md format:
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. **Fork** this repository
+2. **Modify** SKILL.md or add new chart types
+3. **Test** with sample data
+4. **Submit** a Pull Request
+
+### Skill Format
+
+```yaml
+---
+name: pythesis-plot
+description: | 
+  Clear trigger conditions for when AI should load this skill.
+  List specific phrases and contexts.
+---
+
+# Skill Body
+
+## Quick Start
+Brief instructions...
+
+## Features
+- Feature 1
+- Feature 2
+```
+
+---
+
+## 🌐 Languages
+
+- **English**: [README.md](README.md) (this file)
+- **中文**: [README.zh-CN.md](README.zh-CN.md)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
 ## 🙏 Acknowledgments
 
-- 🎨 Color palettes inspired by [Nature](https://www.nature.com/) and [Science](https://www.science.org/) style guides
-- 📊 Statistical visualization best practices from [Seaborn](https://seaborn.pydata.org/)
-- 🎓 Academic plotting standards from [Matplotlib](https://matplotlib.org/)
+- 🎨 Color palettes from [Nature](https://www.nature.com/) and [Science](https://www.science.org/) style guides
+- 📊 Visualization practices from [Seaborn](https://seaborn.pydata.org/)
+- 🎓 Academic standards from [Matplotlib](https://matplotlib.org/)
 
 ---
 
@@ -277,9 +264,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Made with ❤️ for Researchers**
 
 [⬆ Back to Top](#-pythesisplot)
-
----
-
-🌐 **Languages**: [English](README.md) | [中文](README.zh-CN.md)
 
 </div>
