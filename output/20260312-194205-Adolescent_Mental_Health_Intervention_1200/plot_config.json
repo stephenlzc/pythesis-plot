@@ -1,0 +1,33 @@
+{
+  "timestamp": "20260312-194205",
+  "data_file": "20260312-194205-Adolescent_Mental_Health_Intervention_1200.xlsx",
+  "original_file": "Adolescent_Mental_Health_Intervention_1200.xlsx",
+  "sheet_name": "RawData",
+  "plots": [
+    {
+      "id": 1,
+      "name": "研究概况_CONSORT",
+      "type": "study_overview"
+    },
+    {
+      "id": 2,
+      "name": "SDQ前后对比",
+      "type": "sdq_comparison"
+    },
+    {
+      "id": 4,
+      "name": "响应者分析",
+      "type": "responder_analysis"
+    },
+    {
+      "id": 5,
+      "name": "剂量效应关系",
+      "type": "dose_response"
+    },
+    {
+      "id": 6,
+      "name": "综合结果图",
+      "type": "comprehensive_dashboard"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+# PyThesisPlot - 演示汇报风格主题
+# 适合 PPT 演示，高对比度
+
+# 图表尺寸
+figure.figsize: 10, 6
+figure.dpi: 100
+
+# 字体设置
+font.family: sans-serif
+font.sans-serif: SimHei, Microsoft YaHei, Arial, sans-serif
+font.size: 14
+axes.titlesize: 16
+axes.labelsize: 14
+xtick.labelsize: 12
+ytick.labelsize: 12
+legend.fontsize: 12
+axes.unicode_minus: False
+axes.titleweight: bold
+
+# 线条样式
+lines.linewidth: 2.5
+lines.markersize: 10
+
+# 坐标轴样式
+axes.linewidth: 1.5
+axes.edgecolor: black
+axes.grid: True
+axes.grid.axis: both
+axes.grid.which: major
+
+# 网格样式
+grid.linewidth: 1.0
+grid.linestyle: -
+grid.alpha: 0.2
+grid.color: gray
+
+# 刻度样式
+xtick.direction: in
+ytick.direction: in
+xtick.major.size: 6
+ytick.major.size: 6
+xtick.major.width: 1.5
+ytick.major.width: 1.5
+
+# 图例样式
+legend.frameon: True
+legend.fancybox: True
+legend.shadow: True
+legend.loc: best
+legend.framealpha: 0.9
+
+# 颜色循环 (高对比度)
+axes.prop_cycle: cycler('color', ['E41A1C', '377EB8', '4DAF4A', '984EA3', 'FF7F00', 'FFFF33'])
+
+# 保存设置
+savefig.dpi: 150
+savefig.bbox: tight
+savefig.pad_inches: 0.15
+savefig.format: png
+savefig.facecolor: white

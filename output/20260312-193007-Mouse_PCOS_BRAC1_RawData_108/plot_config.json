@@ -1,0 +1,110 @@
+{
+  "timestamp": "20260312-193007",
+  "data_file": "20260312-193007-Mouse_PCOS_BRAC1_RawData_108.xlsx",
+  "original_file": "Mouse_PCOS_BRAC1_RawData_108.xlsx",
+  "sheet_name": "RawData",
+  "plots": [
+    {
+      "id": 1,
+      "name": "体重对比",
+      "type": "bar_with_scatter",
+      "title": "Body Weight Comparison",
+      "x_col": "Group",
+      "y_col": "Body_Weight_g",
+      "ylabel": "Body Weight (g)",
+      "figsize": [
+        8,
+        6
+      ],
+      "show_scatter": true,
+      "show_stats": true
+    },
+    {
+      "id": 2,
+      "name": "卵巢重量对比",
+      "type": "bar_with_scatter",
+      "title": "Ovary Weight Comparison",
+      "x_col": "Group",
+      "y_col": "Ovary_Weight_mg",
+      "ylabel": "Ovary Weight (mg)",
+      "figsize": [
+        8,
+        6
+      ],
+      "show_scatter": true,
+      "show_stats": true
+    },
+    {
+      "id": 3,
+      "name": "BRAC1相对表达量",
+      "type": "bar_logy",
+      "title": "BRAC1 Relative Expression",
+      "x_col": "Group",
+      "y_col": "Relative_Expression",
+      "ylabel": "Relative Expression (log scale)",
+      "figsize": [
+        8,
+        6
+      ],
+      "log_scale": true,
+      "show_scatter": true,
+      "show_stats": true
+    },
+    {
+      "id": 4,
+      "name": "qPCR Ct值分布",
+      "type": "boxplot",
+      "title": "qPCR Ct Values",
+      "cols": [
+        "BRAC1_Ct",
+        "GAPDH_Ct"
+      ],
+      "group_col": "Group",
+      "ylabel": "Ct Value",
+      "figsize": [
+        10,
+        6
+      ]
+    },
+    {
+      "id": 5,
+      "name": "综合仪表盘",
+      "type": "dashboard",
+      "layout": "2x2",
+      "figsize": [
+        14,
+        12
+      ],
+      "plots": [
+        {
+          "type": "bar",
+          "title": "(a) Body Weight",
+          "x_col": "Group",
+          "y_col": "Body_Weight_g",
+          "ylabel": "Weight (g)"
+        },
+        {
+          "type": "bar",
+          "title": "(b) Ovary Weight",
+          "x_col": "Group",
+          "y_col": "Ovary_Weight_mg",
+          "ylabel": "Weight (mg)"
+        },
+        {
+          "type": "bar_log",
+          "title": "(c) BRAC1 Expression",
+          "x_col": "Group",
+          "y_col": "Relative_Expression",
+          "ylabel": "Rel. Exp. (log)"
+        },
+        {
+          "type": "box",
+          "title": "(d) BRAC1 Ct Values",
+          "y_col": "BRAC1_Ct",
+          "group_col": "Group",
+          "ylabel": "Ct"
+        }
+      ]
+    }
+  ]
+}
