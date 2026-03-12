@@ -20,13 +20,15 @@ PyThesisPlot is a **Claude Code Skill** that teaches AI assistants how to create
 
 **Trigger**: When you upload data files (CSV/Excel/TXT) and ask for plots, charts, or figures.
 
+**Supported Platforms**: Claude Code · OpenCode · OpenClaw · Kimi CLI · Trae · Cursor
+
 ---
 
 ## 📦 Installation
 
 ### For Humans
 
-Copy and paste this to your AI assistant (Claude Code, Cursor, etc.):
+Copy and paste this to your AI assistant:
 
 ```
 Install PyThesisPlot skill for me:
@@ -37,8 +39,27 @@ Or if you enjoy YAML-induced headaches, read the [Installation Guide](docs/insta
 
 ### For LLM Agents
 
+**Claude Code:**
 ```bash
 git clone https://github.com/stephenlzc/pythesis-plot.git ~/.claude/skills/pythesis-plot
+pip install pandas matplotlib seaborn openpyxl numpy scipy
+```
+
+**OpenCode / OpenClaw:**
+```bash
+git clone https://github.com/stephenlzc/pythesis-plot.git ~/.opencode/skills/pythesis-plot
+pip install pandas matplotlib seaborn openpyxl numpy scipy
+```
+
+**Kimi CLI:**
+```bash
+git clone https://github.com/stephenlzc/pythesis-plot.git ~/.kimi/skills/pythesis-plot
+pip install pandas matplotlib seaborn openpyxl numpy scipy
+```
+
+**Trae:**
+```bash
+git clone https://github.com/stephenlzc/pythesis-plot.git ~/.trae/skills/pythesis-plot
 pip install pandas matplotlib seaborn openpyxl numpy scipy
 ```
 

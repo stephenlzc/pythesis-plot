@@ -98,6 +98,57 @@ Tell the user:
 
 ---
 
+## Platform-Specific Installation
+
+### Claude Code
+
+**Default path:** `~/.claude/skills/`
+
+```bash
+git clone https://github.com/stephenlzc/pythesis-plot.git ~/.claude/skills/pythesis-plot
+pip install pandas matplotlib seaborn openpyxl numpy scipy
+```
+
+### OpenCode / OpenClaw
+
+**Default path:** `~/.opencode/skills/`
+
+```bash
+git clone https://github.com/stephenlzc/pythesis-plot.git ~/.opencode/skills/pythesis-plot
+pip install pandas matplotlib seaborn openpyxl numpy scipy
+```
+
+### Kimi CLI
+
+**Default path:** `~/.kimi/skills/`
+
+```bash
+git clone https://github.com/stephenlzc/pythesis-plot.git ~/.kimi/skills/pythesis-plot
+pip install pandas matplotlib seaborn openpyxl numpy scipy
+```
+
+### Trae
+
+**Default path:** `~/.trae/skills/`
+
+```bash
+git clone https://github.com/stephenlzc/pythesis-plot.git ~/.trae/skills/pythesis-plot
+pip install pandas matplotlib seaborn openpyxl numpy scipy
+```
+
+### Cursor
+
+Cursor uses `.cursor` directory:
+
+```bash
+git clone https://github.com/stephenlzc/pythesis-plot.git ~/.cursor/skills/pythesis-plot
+pip install pandas matplotlib seaborn openpyxl numpy scipy
+```
+
+**Note:** Cursor's skill support may vary. You may need to reference the skill manually in your project.
+
+---
+
 ## Manual Installation
 
 *For those who insist on doing it the hard way...*
@@ -108,7 +159,7 @@ Tell the user:
 - pip
 - Git
 
-### Step-by-Step
+### Generic Steps
 
 ```bash
 # 1. Clone repository
@@ -120,23 +171,28 @@ cd pythesis-plot
 # 3. Install dependencies
 pip install pandas matplotlib seaborn openpyxl numpy scipy
 
-# 4. Copy to Claude skills directory
-cp -r . ~/.claude/skills/pythesis-plot
+# 4. Copy to your AI assistant's skills directory
+# Replace {platform} with: claude, opencode, kimi, trae, cursor
+cp -r . ~/{platform}/skills/pythesis-plot
 
 # Or use symlink (recommended for development)
-ln -s $(pwd) ~/.claude/skills/pythesis-plot
+ln -s $(pwd) ~/{platform}/skills/pythesis-plot
 ```
 
 ### Alternative: User-specific installation
 
-If you don't want to install to `~/.claude/skills/`, you can use a local path:
+If you don't want to install to the default skills directory:
 
 ```bash
 # Clone to your projects folder
 git clone https://github.com/stephenlzc/pythesis-plot.git ~/projects/pythesis-plot
 
-# Create symlink from Claude skills
+# Create symlink from AI assistant's skills directory
+# Example for Claude:
 ln -s ~/projects/pythesis-plot ~/.claude/skills/pythesis-plot
+
+# Example for Kimi:
+ln -s ~/projects/pythesis-plot ~/.kimi/skills/pythesis-plot
 ```
 
 ---
