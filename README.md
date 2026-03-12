@@ -33,21 +33,16 @@ Install PyThesisPlot skill for me:
 https://github.com/stephenlzc/pythesis-plot
 ```
 
-Or if you enjoy YAML-induced headaches, read the [Installation Details](#installation-details) below. But seriously, let the agent handle it. Humans copy-paste paths wrong.
+Or if you enjoy YAML-induced headaches, read the [Installation Guide](docs/installation.md). But seriously, let the agent handle it. Humans copy-paste paths wrong.
 
 ### For LLM Agents
 
-Install this skill for your human:
-
 ```bash
 git clone https://github.com/stephenlzc/pythesis-plot.git ~/.claude/skills/pythesis-plot
-```
-
-Then install dependencies:
-
-```bash
 pip install pandas matplotlib seaborn openpyxl numpy scipy
 ```
+
+**Full instructions**: [docs/installation.md](docs/installation.md)
 
 ---
 
@@ -60,32 +55,6 @@ I have some data and need publication-ready figures for my thesis.
 Use PyThesisPlot skill to help me:
 https://github.com/stephenlzc/pythesis-plot
 ```
-
----
-
-## 📋 Installation Details
-
-*For the brave souls who insist on doing it manually...*
-
-### Manual Installation
-
-```bash
-# 1. Clone
-git clone https://github.com/stephenlzc/pythesis-plot.git
-
-# 2. Dependencies
-pip install pandas matplotlib seaborn openpyxl numpy scipy
-
-# 3. Install to Claude Code
-cp -r pythesis-plot ~/.claude/skills/
-
-# Or symlink
-ln -s $(pwd)/pythesis-plot ~/.claude/skills/pythesis-plot
-```
-
-### Verify Installation
-
-Upload a CSV file and ask: *"Create some charts for my paper"* — the skill should auto-activate.
 
 ---
 
