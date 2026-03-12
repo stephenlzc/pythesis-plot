@@ -1,6 +1,10 @@
 ---
 name: pythesis-plot
-description: Python scientific plotting tool designed for thesis/dissertation scenarios. Supports complete workflow from data upload → analysis → recommendations → confirmation → generation. Triggers when users upload data files (txt/md/excel/csv) and mention "help me plot", "create chart", "data visualization", "thesis figure", "scientific plotting". Workflow: 1) Auto-save files to output directory 2) Analyze data characteristics 3) Recommend chart schemes 4) Wait for user confirmation 5) Generate code and images to same directory.
+description: >
+  Python scientific plotting tool for thesis/dissertation scenarios.
+  Workflow: data upload → analysis → recommendations → confirmation → generation.
+  Triggers when users upload data files (CSV/Excel/TXT) and ask for plots,
+  charts, figures, or data visualization for academic publications.
 ---
 
 # PyThesisPlot
