@@ -24,59 +24,68 @@ PyThesisPlot is a **Claude Code Skill** that teaches AI assistants how to create
 
 ## 📦 Installation
 
+### For Humans
+
+Copy and paste this to your AI assistant (Claude Code, Cursor, etc.):
+
+```
+Install PyThesisPlot skill for me:
+https://github.com/stephenlzc/pythesis-plot
+```
+
+Or if you enjoy YAML-induced headaches, read the [Installation Details](#installation-details) below. But seriously, let the agent handle it. Humans copy-paste paths wrong.
+
 ### For LLM Agents
 
-If you're an AI assistant (Claude Code, OpenCode, etc.), install this skill:
+Install this skill for your human:
 
 ```bash
-# Clone the repository
+git clone https://github.com/stephenlzc/pythesis-plot.git ~/.claude/skills/pythesis-plot
+```
+
+Then install dependencies:
+
+```bash
+pip install pandas matplotlib seaborn openpyxl numpy scipy
+```
+
+---
+
+## 🚀 Skip This README
+
+We're past the era of manual plotting. Just paste this into your agent:
+
+```
+I have some data and need publication-ready figures for my thesis. 
+Use PyThesisPlot skill to help me:
+https://github.com/stephenlzc/pythesis-plot
+```
+
+---
+
+## 📋 Installation Details
+
+*For the brave souls who insist on doing it manually...*
+
+### Manual Installation
+
+```bash
+# 1. Clone
 git clone https://github.com/stephenlzc/pythesis-plot.git
 
-# Copy skill to Claude's skills directory
+# 2. Dependencies
+pip install pandas matplotlib seaborn openpyxl numpy scipy
+
+# 3. Install to Claude Code
 cp -r pythesis-plot ~/.claude/skills/
 
-# Or symlink to avoid duplication
+# Or symlink
 ln -s $(pwd)/pythesis-plot ~/.claude/skills/pythesis-plot
 ```
 
-**For OpenCode / Other AI Assistants:**
+### Verify Installation
 
-```bash
-cp -r pythesis-plot /path/to/your/agent/skills/
-```
-
-### For Humans
-
-If you're a human researcher installing this for your AI assistant:
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/stephenlzc/pythesis-plot.git
-   cd pythesis-plot
-   ```
-
-2. **Install Python dependencies**
-   ```bash
-   pip install pandas matplotlib seaborn openpyxl numpy scipy
-   ```
-
-3. **Install the skill to your AI assistant**
-   
-   **For Claude Code:**
-   ```bash
-   cp -r pythesis-plot ~/.claude/skills/
-   ```
-   
-   **For OpenCode:**
-   ```bash
-   cp -r pythesis-plot ~/.opencode/skills/
-   ```
-
-4. **Verify installation**
-   
-   Ask your AI assistant: *"Can you help me create scientific figures from my data?"*
-   
-   The skill should automatically activate when you upload data files.
+Upload a CSV file and ask: *"Create some charts for my paper"* — the skill should auto-activate.
 
 ---
 
