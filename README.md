@@ -3,6 +3,7 @@
 <img src="https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.8+">
 <img src="https://img.shields.io/badge/Matplotlib-3.5%2B-orange?style=for-the-badge&logo=python&logoColor=white" alt="Matplotlib">
 <img src="https://img.shields.io/github/license/stephenlzc/pythesis-plot?style=for-the-badge&color=green" alt="License">
+<img src="https://img.shields.io/github/v/release/stephenlzc/pythesis-plot?style=for-the-badge&color=blue" alt="Release">
 <img src="https://img.shields.io/github/stars/stephenlzc/pythesis-plot?style=for-the-badge&color=yellow" alt="Stars">
 
 # 📊 PyThesisPlot
@@ -11,7 +12,7 @@
 
 *From Data to Publication-Ready Figures in Minutes*
 
-[🚀 Quick Start](#quick-start) • [📖 Documentation](#documentation) • [💡 Examples](#examples) • [🌐 中文](README.zh-CN.md)
+[🚀 Quick Start](#quick-start) • [📖 Documentation](#documentation) • [💡 Examples](#examples) • [📝 Release Notes](https://github.com/stephenlzc/pythesis-plot/releases) • [🌐 中文](README.zh-CN.md)
 
 </div>
 
