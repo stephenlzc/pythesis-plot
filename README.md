@@ -24,7 +24,9 @@ PyThesisPlot is a **Claude Code Skill** that teaches AI assistants how to create
 
 ## 📦 Installation
 
-### For Claude Code
+### For LLM Agents
+
+If you're an AI assistant (Claude Code, OpenCode, etc.), install this skill:
 
 ```bash
 # Clone the repository
@@ -37,13 +39,44 @@ cp -r pythesis-plot ~/.claude/skills/
 ln -s $(pwd)/pythesis-plot ~/.claude/skills/pythesis-plot
 ```
 
-### For OpenCode / Other AI Assistants
-
-Copy the skill directory to your agent's skills folder:
+**For OpenCode / Other AI Assistants:**
 
 ```bash
 cp -r pythesis-plot /path/to/your/agent/skills/
 ```
+
+### For Humans
+
+If you're a human researcher installing this for your AI assistant:
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/stephenlzc/pythesis-plot.git
+   cd pythesis-plot
+   ```
+
+2. **Install Python dependencies**
+   ```bash
+   pip install pandas matplotlib seaborn openpyxl numpy scipy
+   ```
+
+3. **Install the skill to your AI assistant**
+   
+   **For Claude Code:**
+   ```bash
+   cp -r pythesis-plot ~/.claude/skills/
+   ```
+   
+   **For OpenCode:**
+   ```bash
+   cp -r pythesis-plot ~/.opencode/skills/
+   ```
+
+4. **Verify installation**
+   
+   Ask your AI assistant: *"Can you help me create scientific figures from my data?"*
+   
+   The skill should automatically activate when you upload data files.
 
 ---
 
